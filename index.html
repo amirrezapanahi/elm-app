@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Elm App</title>
+  <style>
+    /* Put your CSS for shake-aggressive here */
+    @keyframes shake-aggressive {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-10px);
+      }
+      20%, 40%, 60%, 80% {
+        transform: translateX(10px);
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="path/to/your/external.css">
+</head>
+<body>
+  <div id="elm-main"></div>
+
+  <!-- Include the Elm.js file at the bottom of the body -->
+  <script src="./elm.js"></script>
+  <script>
+    var app = Elm.Main.init({
+      node: document.getElementById('elm-main')
+    });
+  </script>
+</body>
+</html>
